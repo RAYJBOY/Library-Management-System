@@ -1,0 +1,21 @@
+#include "unity.h"
+#include "addToLibrary.h"
+
+void my_test(){
+
+  
+
+}
+
+void setUp (void){}
+
+void tearDown (void){}
+
+int main (void){
+
+  UNITY_BEGIN();
+
+  RUN_TEST( my_test );
+
+  return UNITY_END();
+}

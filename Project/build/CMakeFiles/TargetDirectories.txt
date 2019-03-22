@@ -1,0 +1,2 @@
+/home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles/library.dir
+/home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles/testing.dir

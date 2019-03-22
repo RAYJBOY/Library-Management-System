@@ -1,0 +1,50 @@
+#include "Structures.h"
+#include "addToLibrary.h"
+#include "removeFromLibrary.h"
+#include "listing.h"
+
+
+int indexOfBookArray = -1;
+int maxBookIndex = 2;
+char tempBookName[20] ;
+char tempAuthorName[20] ;
+
+
+int numberofBooks;
+
+int main()
+{
+
+  do
+  {
+
+    printf("Press enter to continue");
+    getchar();
+
+    printf("Enter book name: ");
+    //scanf("%s",tempBookName);
+    fgets(tempBookName,20,stdin);
+
+
+    printf("Enter author name: ");
+    //scanf("%s", tempAuthorName);
+    fgets(tempAuthorName,20,stdin);
+
+
+    printf("Enter the number of books: ");
+    scanf("%d", &numberofBooks);
+
+    addNewBook(tempBookName,tempAuthorName, numberofBooks);
+    listBooks();
+
+    //fflush(stdin);
+
+
+  }while(1);/*printf("In main\n");
+  inaddToLibrary();
+  inremoveFromLibrary();
+  inListing();*/
+
+
+return 0;
+}
