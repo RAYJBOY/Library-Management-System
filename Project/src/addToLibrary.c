@@ -125,7 +125,7 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
   int referenceStudentIndex;
 
 
-  for(studentIndex = 0; studentIndex<indexOfStudentArray; studentIndex++)
+  for(studentIndex = 0; studentIndex<=indexOfStudentArray; studentIndex++)
   {
 
     if(strcmp(studentArray[studentIndex].studentName, nameOfStudent) == 0)
@@ -178,6 +178,7 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
           if(strcmp(bookArray[referenceBookIndex].bookName, nameOfBook) == 0) //finds the book in the book array
           {
             bookArray[referenceBookIndex].bookNumber--; //reduces the number of copies in the book array
+            break;
           }
         }
       }
@@ -185,4 +186,16 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
   }
 
 }
+
 //----------------------------------------------------------------------------------------------------------------
+
+void returnBook(){
+
+
+}
+
+
+void removeBook(){
+
+
+}

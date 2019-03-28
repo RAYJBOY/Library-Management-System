@@ -223,11 +223,83 @@ void borrow_2_books(){
 
   TEST_ASSERT_EQUAL_INT_MESSAGE(0,check, "Student borrowed 2 books!");
 
+}
 
 
+void unregistered_student(){ //check properly again
+
+  addNewBook("Silly Book", "John Anand", 4);
+  borrowBook("NotRegStudent", "Silly Book");
+
+  int i;
+
+  for(i = 0; i<=indexOfBookArray; i++)
+  {
+    if(strcmp(bookArray[i].bookName, "Silly Book") == 0)
+    {
+      TEST_ASSERT_EQUAL_INT(4, bookArray[i].bookNumber);
+    }
+  }
+}
+
+
+
+void return_book_correctly() //check properly again
+{
+  addNewBook("Dont Return This", "Hamza Imam", 5);
+  returnBook("Dont Return This", "Peter Parker");
+
+  int i;
+
+  for(i=0; i<=indexOfBookArray; i++){
+    if(strcmp(bookArray[i].bookName, "Dont Return This") == 0)
+    {
+      TEST_ASSERT_EQUAL_INT(5,bookArray[i].bookNumber);
+    }
+  }
 
 }
 
+
+void return_unborrowed_book() //complete this
+{
+  registerStudent(543, "Tony Stark");
+  addNewBook("First book added", "Rayj Gupta", 5);
+  addNewBook("Second book added", "George", 7);
+  borrowBook("Tony Stark", "First book added");
+  returnBook("Second book added", "Tony Stark");
+
+  int i;
+
+  for(i = 0; i<=indexOfBookArray; i++)
+  {
+    if(strcmp(bookArray[i].bookName, "Second book added") == 0){
+      TEST_ASSERT_EQUAL_INT(7, bookArray[i].bookNumber);
+    }
+  }
+}
+
+
+void book_doesnt_exist(){ //run after implementing removeBook
+
+  addNewBook("BookToBeRemoved", "RandomPerson", 4);
+  removeBook("BookToBeRemoved", "RandomPerson");
+
+  int i, check;
+
+  for(i=0; i<=indexOfBookArray; i++){
+    if(strcmp(bookArray[i].bookName, "BookToBeRemoved") == 0) //should not compare names, should compare the number of books
+    {
+      check = 1;
+      break;
+    }
+    else{
+      check = 0;
+    }
+  }
+
+  TEST_ASSERT_EQUAL_INT(0, check);
+}
 
 
 void setUp (void){}
@@ -248,6 +320,9 @@ int main (void){
   RUN_TEST(borrow_correct_book);
   RUN_TEST(borrow_invalid_book);
   RUN_TEST(borrow_2_books);
+  RUN_TEST(unregistered_student);
+  RUN_TEST(return_unborrowed_book);
+  RUN_TEST(book_doesnt_exist);
 
 
 

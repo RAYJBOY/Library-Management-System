@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2
+CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/build
+CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -115,6 +115,19 @@ library/fast:
 .PHONY : library/fast
 
 #=============================================================================
+# Target rules for targets named list_testing
+
+# Build rule for target.
+list_testing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 list_testing
+.PHONY : list_testing
+
+# fast build rule for target.
+list_testing/fast:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/build
+.PHONY : list_testing/fast
+
+#=============================================================================
 # Target rules for targets named testing
 
 # Build rule for target.
@@ -133,6 +146,7 @@ src/addToLibrary.o: src/addToLibrary.c.o
 # target to build an object file
 src/addToLibrary.c.o:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/addToLibrary.c.o
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/addToLibrary.c.o
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/addToLibrary.c.o
 .PHONY : src/addToLibrary.c.o
 
@@ -142,6 +156,7 @@ src/addToLibrary.i: src/addToLibrary.c.i
 # target to preprocess a source file
 src/addToLibrary.c.i:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/addToLibrary.c.i
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/addToLibrary.c.i
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/addToLibrary.c.i
 .PHONY : src/addToLibrary.c.i
 
@@ -151,6 +166,7 @@ src/addToLibrary.s: src/addToLibrary.c.s
 # target to generate assembly for a file
 src/addToLibrary.c.s:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/addToLibrary.c.s
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/addToLibrary.c.s
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/addToLibrary.c.s
 .PHONY : src/addToLibrary.c.s
 
@@ -160,6 +176,7 @@ src/listing.o: src/listing.c.o
 # target to build an object file
 src/listing.c.o:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.o
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.o
 .PHONY : src/listing.c.o
 
 src/listing.i: src/listing.c.i
@@ -168,6 +185,7 @@ src/listing.i: src/listing.c.i
 # target to preprocess a source file
 src/listing.c.i:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.i
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.i
 .PHONY : src/listing.c.i
 
 src/listing.s: src/listing.c.s
@@ -176,6 +194,7 @@ src/listing.s: src/listing.c.s
 # target to generate assembly for a file
 src/listing.c.s:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.s
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.s
 .PHONY : src/listing.c.s
 
 src/main.o: src/main.c.o
@@ -226,11 +245,36 @@ test/test_addToLibrary.c.s:
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/test/test_addToLibrary.c.s
 .PHONY : test/test_addToLibrary.c.s
 
+test/test_listing.o: test/test_listing.c.o
+.PHONY : test/test_listing.o
+
+# target to build an object file
+test/test_listing.c.o:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/test/test_listing.c.o
+.PHONY : test/test_listing.c.o
+
+test/test_listing.i: test/test_listing.c.i
+.PHONY : test/test_listing.i
+
+# target to preprocess a source file
+test/test_listing.c.i:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/test/test_listing.c.i
+.PHONY : test/test_listing.c.i
+
+test/test_listing.s: test/test_listing.c.s
+.PHONY : test/test_listing.s
+
+# target to generate assembly for a file
+test/test_listing.c.s:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/test/test_listing.c.s
+.PHONY : test/test_listing.c.s
+
 unity/unity.o: unity/unity.c.o
 .PHONY : unity/unity.o
 
 # target to build an object file
 unity/unity.c.o:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/unity/unity.c.o
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/unity/unity.c.o
 .PHONY : unity/unity.c.o
 
@@ -239,6 +283,7 @@ unity/unity.i: unity/unity.c.i
 
 # target to preprocess a source file
 unity/unity.c.i:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/unity/unity.c.i
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/unity/unity.c.i
 .PHONY : unity/unity.c.i
 
@@ -247,6 +292,7 @@ unity/unity.s: unity/unity.c.s
 
 # target to generate assembly for a file
 unity/unity.c.s:
+	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/unity/unity.c.s
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/unity/unity.c.s
 .PHONY : unity/unity.c.s
 
@@ -258,6 +304,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... library"
+	@echo "... list_testing"
 	@echo "... rebuild_cache"
 	@echo "... testing"
 	@echo "... src/addToLibrary.o"
@@ -272,6 +319,9 @@ help:
 	@echo "... test/test_addToLibrary.o"
 	@echo "... test/test_addToLibrary.i"
 	@echo "... test/test_addToLibrary.s"
+	@echo "... test/test_listing.o"
+	@echo "... test/test_listing.i"
+	@echo "... test/test_listing.s"
 	@echo "... unity/unity.o"
 	@echo "... unity/unity.i"
 	@echo "... unity/unity.s"

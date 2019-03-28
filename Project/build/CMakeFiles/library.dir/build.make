@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2
+CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/build
+CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/library.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/library.dir/flags.make
 
 CMakeFiles/library.dir/src/addToLibrary.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/src/addToLibrary.c.o: ../src/addToLibrary.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/src/addToLibrary.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/addToLibrary.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/addToLibrary.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/addToLibrary.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/addToLibrary.c
 
 CMakeFiles/library.dir/src/addToLibrary.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/src/addToLibrary.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/addToLibrary.c > CMakeFiles/library.dir/src/addToLibrary.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/addToLibrary.c > CMakeFiles/library.dir/src/addToLibrary.c.i
 
 CMakeFiles/library.dir/src/addToLibrary.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/src/addToLibrary.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/addToLibrary.c -o CMakeFiles/library.dir/src/addToLibrary.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/addToLibrary.c -o CMakeFiles/library.dir/src/addToLibrary.c.s
 
 CMakeFiles/library.dir/src/addToLibrary.c.o.requires:
 .PHONY : CMakeFiles/library.dir/src/addToLibrary.c.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/library.dir/src/addToLibrary.c.o.provides.build: CMakeFiles/library.d
 
 CMakeFiles/library.dir/src/main.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/src/main.c.o: ../src/main.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/src/main.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/main.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/main.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/main.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/main.c
 
 CMakeFiles/library.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/src/main.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/main.c > CMakeFiles/library.dir/src/main.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/main.c > CMakeFiles/library.dir/src/main.c.i
 
 CMakeFiles/library.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/src/main.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/main.c -o CMakeFiles/library.dir/src/main.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/main.c -o CMakeFiles/library.dir/src/main.c.s
 
 CMakeFiles/library.dir/src/main.c.o.requires:
 .PHONY : CMakeFiles/library.dir/src/main.c.o.requires
@@ -100,17 +100,17 @@ CMakeFiles/library.dir/src/main.c.o.provides.build: CMakeFiles/library.dir/src/m
 
 CMakeFiles/library.dir/src/listing.c.o: CMakeFiles/library.dir/flags.make
 CMakeFiles/library.dir/src/listing.c.o: ../src/listing.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/src/listing.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/listing.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/listing.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/listing.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c
 
 CMakeFiles/library.dir/src/listing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/src/listing.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/listing.c > CMakeFiles/library.dir/src/listing.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c > CMakeFiles/library.dir/src/listing.c.i
 
 CMakeFiles/library.dir/src/listing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/src/listing.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/src/listing.c -o CMakeFiles/library.dir/src/listing.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c -o CMakeFiles/library.dir/src/listing.c.s
 
 CMakeFiles/library.dir/src/listing.c.o.requires:
 .PHONY : CMakeFiles/library.dir/src/listing.c.o.requires
@@ -152,6 +152,6 @@ CMakeFiles/library.dir/clean:
 .PHONY : CMakeFiles/library.dir/clean
 
 CMakeFiles/library.dir/depend:
-	cd /home/cserv1_a/elec_ug/el18mhi/c_project_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cserv1_a/elec_ug/el18mhi/c_project_2 /home/cserv1_a/elec_ug/el18mhi/c_project_2 /home/cserv1_a/elec_ug/el18mhi/c_project_2/build /home/cserv1_a/elec_ug/el18mhi/c_project_2/build /home/cserv1_a/elec_ug/el18mhi/c_project_2/build/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles/library.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/library.dir/depend
 

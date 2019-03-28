@@ -1,0 +1,1 @@
+/usr/bin/cc  -g    CMakeFiles/list_testing.dir/src/listing.c.o CMakeFiles/list_testing.dir/src/addToLibrary.c.o CMakeFiles/list_testing.dir/test/test_listing.c.o CMakeFiles/list_testing.dir/unity/unity.c.o  -o list_testing -rdynamic 

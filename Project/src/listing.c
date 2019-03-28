@@ -26,5 +26,40 @@ void listBooks()
 
   printf("-------------------------------------------------------------------\n");
 
+}
+
+BookStructure* searchBook(char* BookName)
+{
+  int i;
+
+  for(i=0;i<=indexOfBookArray;i++)
+  {
+    if(strcmp(bookArray[i].bookName, BookName) == 0){
+      return (bookArray+i);
+    }
+  }
+}
+
+
+
+StudentStructure* searchStudent(int StudentID)
+{
+  int i;
+
+  for(i=0;i<=indexOfStudentArray;i++)
+  {
+    if(studentArray[i].studentID == StudentID){
+      return (studentArray+i);
+    }
+  }
+}
+
+
+void printSearchedBook(char* NameOfBook)
+{
+  StudentStructure* bookToPrint = searchBook(NameOfBook);
+  printf("\nBook name: %s", bookToPrint->bookName);
+  printf("\nAuthor name: %s", bookToPrint->authorName);
+  printf("\nAmount of books: %d", bookToPrint->bookNumber);
 
 }

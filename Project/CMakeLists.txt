@@ -13,6 +13,13 @@ add_executable(testing
   unity/unity.c
 )
 
+add_executable(list_testing 	
+  src/listing.c
+  src/addToLibrary.c
+  test/test_listing.c
+  unity/unity.c
+)
+
 add_executable(library 	
   src/addToLibrary.c
   src/main.c
