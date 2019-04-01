@@ -24,6 +24,7 @@ add_executable(library
   src/addToLibrary.c
   src/main.c
   src/listing.c
+  src/interface.c
 )
 
 target_link_libraries(testing m)

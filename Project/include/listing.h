@@ -4,10 +4,12 @@
 
 #include "Structures.h"
 
-void inListing();
 void listBooks();
+void listStudents();
 BookStructure* searchBook();
 StudentStructure* searchStudent();
+void printSearchedBook(char* NameOfBook);
+void printSearchedStudent(int stdID);
 
 
 

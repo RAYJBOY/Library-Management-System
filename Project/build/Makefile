@@ -170,6 +170,30 @@ src/addToLibrary.c.s:
 	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/addToLibrary.c.s
 .PHONY : src/addToLibrary.c.s
 
+src/interface.o: src/interface.c.o
+.PHONY : src/interface.o
+
+# target to build an object file
+src/interface.c.o:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/interface.c.o
+.PHONY : src/interface.c.o
+
+src/interface.i: src/interface.c.i
+.PHONY : src/interface.i
+
+# target to preprocess a source file
+src/interface.c.i:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/interface.c.i
+.PHONY : src/interface.c.i
+
+src/interface.s: src/interface.c.s
+.PHONY : src/interface.s
+
+# target to generate assembly for a file
+src/interface.c.s:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/interface.c.s
+.PHONY : src/interface.c.s
+
 src/listing.o: src/listing.c.o
 .PHONY : src/listing.o
 
@@ -310,6 +334,9 @@ help:
 	@echo "... src/addToLibrary.o"
 	@echo "... src/addToLibrary.i"
 	@echo "... src/addToLibrary.s"
+	@echo "... src/interface.o"
+	@echo "... src/interface.i"
+	@echo "... src/interface.s"
 	@echo "... src/listing.o"
 	@echo "... src/listing.i"
 	@echo "... src/listing.s"

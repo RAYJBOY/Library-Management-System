@@ -2,19 +2,22 @@
 #include "addToLibrary.h"
 #include "removeFromLibrary.h"
 #include "listing.h"
+#include "interface.h"
 
 
-char tempBookName[20] ;
+/*char tempBookName[20] ;
 char tempAuthorName[20] ;
-int numberofBooks;
+int numberofBooks;*/
 
 
 int main()
 {
 
-  printf("Press enter to continue");
+  startingPoint();
 
-  do
+  //printf("Press enter to continue");
+
+  /*do
   {
     getchar();
 
@@ -33,7 +36,7 @@ int main()
     listBooks();
 
 
-  }while(1);
+  }while(1);*/
 
 
 return 0;

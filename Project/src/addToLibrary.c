@@ -10,12 +10,9 @@ StudentStructure* studentArray;
 
 
 
-void inaddToLibrary()
-{
-  printf("This is in addToLibrary\n");
-}
 
-void addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)
+
+int addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)//1 for fine, 0 for something went wrong
 {
   int indexOfBook;
 
@@ -24,12 +21,12 @@ void addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)
     if(strcmp(bookArray[indexOfBook].bookName, nameOfBook) == 0 && strcmp(bookArray[indexOfBook].authorName, nameOfAuthor) == 0) //if its the same author and book name, number is just added
     {
       bookArray[indexOfBook].bookNumber = bookArray[indexOfBook].bookNumber + numberOfBooks;
-      return;
+      return 1;
     }
   }
 
   if(numberOfBooks == 0){
-    return;
+    return 0;
   }
 
   else if(numberOfBooks != 0)
@@ -65,14 +62,14 @@ void addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)
 
 //----------------------------------------------------------------------------------------------------------------
 
-void registerStudent(int student_ID, char* nameOfStudent){
+int registerStudent(int student_ID, char* nameOfStudent){ //1 for fine, 0 for student already exists, 2 for ID already exists, 3 for invalid ID
   int i; //used in the for loop below
 
   for(i = 0; i<=indexOfStudentArray; i++) //checks if the same studeny name is already present in the array
   {
     if(strcmp(studentArray[i].studentName, nameOfStudent) == 0)
     {
-      return;
+      return 0;
     }
   }
 
@@ -80,13 +77,13 @@ void registerStudent(int student_ID, char* nameOfStudent){
   {
     if(studentArray[i].studentID == student_ID)
     {
-      return;
+      return 2;
     }
   }
 
   if(student_ID<0) //if the student_ID is invalid, it returns to caller.
   {
-    return;
+    return 3;
   }
 
   else if(indexOfStudentArray == -1) //if its the first time registering student.
@@ -116,13 +113,14 @@ void registerStudent(int student_ID, char* nameOfStudent){
 
 //----------------------------------------------------------------------------------------------------------------
 
-void borrowBook(char* nameOfStudent, char* nameOfBook)
+int borrowBook(char* nameOfStudent, char* nameOfBook)//1 for fine, 0 for already has book, 2 for book not in library, 3 for student no in library
 {
   int studentIndex;
   int bookIndex;
   int amountOfBooks;
   int referenceBookIndex;
   int referenceStudentIndex;
+  int studentCheck;
 
 
   for(studentIndex = 0; studentIndex<=indexOfStudentArray; studentIndex++)
@@ -132,7 +130,7 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
     {
       if(strcmp(studentArray[studentIndex].bookBorrowed, "") != 0) //if student already has a book borrowed, he cannot borrow another one.
       {
-        return;
+        return 0;
       }
 
       else{
@@ -161,7 +159,7 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
 
   if(amountOfBooks == 0)
   {
-    return;
+    return 2;
   }
 
 
@@ -172,16 +170,23 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
     {
       if(strcmp(studentArray[studentIndex].studentName, nameOfStudent) == 0) //finds the student who requested the book
       {
+        studentCheck = 1;
         strcpy(studentArray[studentIndex].bookBorrowed, nameOfBook); //gives him/her the book
         for(referenceBookIndex = 0; referenceBookIndex<=indexOfBookArray; referenceBookIndex++)
         {
           if(strcmp(bookArray[referenceBookIndex].bookName, nameOfBook) == 0) //finds the book in the book array
           {
             bookArray[referenceBookIndex].bookNumber--; //reduces the number of copies in the book array
-            break;
+            return 1;
           }
         }
       }
+      else{
+        studentCheck = 0;
+      }
+    }
+    if(studentCheck == 0){
+      return 3;
     }
   }
 
@@ -189,13 +194,68 @@ void borrowBook(char* nameOfStudent, char* nameOfBook)
 
 //----------------------------------------------------------------------------------------------------------------
 
-void returnBook(){
+int returnBook(int studID, char* bookToReturn)
+{
 
+  int i;
+  int j;
+  int correctDetail; //1 for correct details, 0 for wrong details, 2 for book not in library, 3 for returning wrong book
 
+  for(i=0;i<=indexOfStudentArray;i++)
+  {
+    if(studentArray[i].studentID == studID && strcmp(studentArray[i].bookBorrowed,bookToReturn) == 0) //checks if student is returning correct book
+    {
+      correctDetail = 1;
+      for (j=0;j<=indexOfBookArray;j++)
+      {
+        if(strcmp(bookArray[j].bookName, bookToReturn) == 0) //sees where the book is in the library
+        {
+          bookArray[j].bookNumber++;
+          strcpy("", studentArray[i].bookBorrowed); //after returning book, student has nothing left
+          return 1;
+        }
+        else
+        {
+          correctDetail = 2;
+        }
+      }
+
+      if(correctDetail == 2)
+      {
+        return 3;
+      }
+
+    }
+    else //wrong details
+    {
+      correctDetail = 0;
+    }
+  }
+
+  if(correctDetail == 0)
+  {
+    return 0;
+  }
 }
 
 
-void removeBook(){
+void removeBook(char* bookTitle){
 
+  int i;
+  int bookInLibrary; //checks whether the book being removed is in library
 
+  for(i=0;i<=indexOfBookArray;i++)
+  {
+    if(strcmp(bookArray[i].bookName, bookTitle) == 0)
+    {
+      bookInLibrary = 1;
+      bookArray[i].bookNumber = 0;
+      break;
+    }
+    else
+    {
+      bookInLibrary = 0;
+    }
+  }
+  return;
 }

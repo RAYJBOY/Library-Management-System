@@ -5,12 +5,17 @@ CMakeFiles/library.dir/src/addToLibrary.c.o: ../include/Structures.h
 CMakeFiles/library.dir/src/addToLibrary.c.o: ../include/addToLibrary.h
 CMakeFiles/library.dir/src/addToLibrary.c.o: ../src/addToLibrary.c
 
+CMakeFiles/library.dir/src/interface.c.o: ../include/Structures.h
+CMakeFiles/library.dir/src/interface.c.o: ../include/interface.h
+CMakeFiles/library.dir/src/interface.c.o: ../src/interface.c
+
 CMakeFiles/library.dir/src/listing.c.o: ../include/Structures.h
 CMakeFiles/library.dir/src/listing.c.o: ../include/listing.h
 CMakeFiles/library.dir/src/listing.c.o: ../src/listing.c
 
 CMakeFiles/library.dir/src/main.c.o: ../include/Structures.h
 CMakeFiles/library.dir/src/main.c.o: ../include/addToLibrary.h
+CMakeFiles/library.dir/src/main.c.o: ../include/interface.h
 CMakeFiles/library.dir/src/main.c.o: ../include/listing.h
 CMakeFiles/library.dir/src/main.c.o: ../include/removeFromLibrary.h
 CMakeFiles/library.dir/src/main.c.o: ../src/main.c

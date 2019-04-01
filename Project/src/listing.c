@@ -5,12 +5,8 @@ extern int indexOfBookArray;
 extern BookStructure* bookArray;
 extern StudentStructure* studentArray;
 extern int indexOfStudentArray;
-extern int indexOfStudentArray;
 
-void inListing()
-{
-  printf("In listing\n");
-}
+
 
 void listBooks()
 {
@@ -19,9 +15,29 @@ void listBooks()
   printf("----------------------------Books so far---------------------------\n");
   for(i = 0; i<=indexOfBookArray; i++)
   {
-    printf("\nBook name: %s", bookArray[i].bookName);
-    printf("Author name: %s", bookArray[i].authorName);
-    printf("Number of books: %d\n", bookArray[i].bookNumber);
+    if(bookArray[i].bookNumber!=0)
+    {
+      printf("\nBook name: %s", bookArray[i].bookName);
+      printf("Author name: %s", bookArray[i].authorName);
+      printf("Number of books: %d\n", bookArray[i].bookNumber);
+    }
+  }
+
+  printf("-------------------------------------------------------------------\n");
+
+}
+
+
+void listStudents()
+{
+  int i;
+
+  printf("----------------------------Students so far---------------------------\n");
+  for(i = 0; i<=indexOfStudentArray; i++)
+  {
+    printf("\nStudent name: %s", studentArray[i].studentName);
+    printf("Student ID: %d", studentArray[i].studentID);
+    printf("Book borrowed: %s\n", studentArray[i].bookBorrowed);
   }
 
   printf("-------------------------------------------------------------------\n");
@@ -57,9 +73,18 @@ StudentStructure* searchStudent(int StudentID)
 
 void printSearchedBook(char* NameOfBook)
 {
-  StudentStructure* bookToPrint = searchBook(NameOfBook);
+  BookStructure* bookToPrint = searchBook(NameOfBook);
   printf("\nBook name: %s", bookToPrint->bookName);
   printf("\nAuthor name: %s", bookToPrint->authorName);
   printf("\nAmount of books: %d", bookToPrint->bookNumber);
+
+}
+
+void printSearchedStudent(int stdID)
+{
+  StudentStructure* studentToPrint = searchStudent(stdID);
+  printf("\nStudent name: %s", studentToPrint->studentName);
+  printf("\nStudent ID: %d", studentToPrint->studentID);
+  printf("\nBook Borrowed: %s", studentToPrint->bookBorrowed);
 
 }

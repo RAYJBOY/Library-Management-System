@@ -121,11 +121,35 @@ CMakeFiles/library.dir/src/listing.c.o.provides: CMakeFiles/library.dir/src/list
 
 CMakeFiles/library.dir/src/listing.c.o.provides.build: CMakeFiles/library.dir/src/listing.c.o
 
+CMakeFiles/library.dir/src/interface.c.o: CMakeFiles/library.dir/flags.make
+CMakeFiles/library.dir/src/interface.c.o: ../src/interface.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/library.dir/src/interface.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/library.dir/src/interface.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/interface.c
+
+CMakeFiles/library.dir/src/interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/library.dir/src/interface.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/interface.c > CMakeFiles/library.dir/src/interface.c.i
+
+CMakeFiles/library.dir/src/interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/library.dir/src/interface.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/interface.c -o CMakeFiles/library.dir/src/interface.c.s
+
+CMakeFiles/library.dir/src/interface.c.o.requires:
+.PHONY : CMakeFiles/library.dir/src/interface.c.o.requires
+
+CMakeFiles/library.dir/src/interface.c.o.provides: CMakeFiles/library.dir/src/interface.c.o.requires
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/interface.c.o.provides.build
+.PHONY : CMakeFiles/library.dir/src/interface.c.o.provides
+
+CMakeFiles/library.dir/src/interface.c.o.provides.build: CMakeFiles/library.dir/src/interface.c.o
+
 # Object files for target library
 library_OBJECTS = \
 "CMakeFiles/library.dir/src/addToLibrary.c.o" \
 "CMakeFiles/library.dir/src/main.c.o" \
-"CMakeFiles/library.dir/src/listing.c.o"
+"CMakeFiles/library.dir/src/listing.c.o" \
+"CMakeFiles/library.dir/src/interface.c.o"
 
 # External object files for target library
 library_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ library_EXTERNAL_OBJECTS =
 library: CMakeFiles/library.dir/src/addToLibrary.c.o
 library: CMakeFiles/library.dir/src/main.c.o
 library: CMakeFiles/library.dir/src/listing.c.o
+library: CMakeFiles/library.dir/src/interface.c.o
 library: CMakeFiles/library.dir/build.make
 library: CMakeFiles/library.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable library"
@@ -145,6 +170,7 @@ CMakeFiles/library.dir/build: library
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/src/addToLibrary.c.o.requires
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/src/main.c.o.requires
 CMakeFiles/library.dir/requires: CMakeFiles/library.dir/src/listing.c.o.requires
+CMakeFiles/library.dir/requires: CMakeFiles/library.dir/src/interface.c.o.requires
 .PHONY : CMakeFiles/library.dir/requires
 
 CMakeFiles/library.dir/clean:

@@ -226,7 +226,7 @@ void borrow_2_books(){
 }
 
 
-void unregistered_student(){ //check properly again
+void unregistered_student_cannot_borrow_book(){ //check properly again
 
   addNewBook("Silly Book", "John Anand", 4);
   borrowBook("NotRegStudent", "Silly Book");
@@ -244,10 +244,10 @@ void unregistered_student(){ //check properly again
 
 
 
-void return_book_correctly() //check properly again
+void unregistered_student_cannot_return_book() //check properly again
 {
   addNewBook("Dont Return This", "Hamza Imam", 5);
-  returnBook("Dont Return This", "Peter Parker");
+  returnBook(588, "Dont Return This");
 
   int i;
 
@@ -267,7 +267,7 @@ void return_unborrowed_book() //complete this
   addNewBook("First book added", "Rayj Gupta", 5);
   addNewBook("Second book added", "George", 7);
   borrowBook("Tony Stark", "First book added");
-  returnBook("Second book added", "Tony Stark");
+  returnBook(543, "Second book added");
 
   int i;
 
@@ -280,7 +280,7 @@ void return_unborrowed_book() //complete this
 }
 
 
-void book_doesnt_exist(){ //run after implementing removeBook
+void book_doesnt_exist(){
 
   addNewBook("BookToBeRemoved", "RandomPerson", 4);
   removeBook("BookToBeRemoved", "RandomPerson");
@@ -290,11 +290,10 @@ void book_doesnt_exist(){ //run after implementing removeBook
   for(i=0; i<=indexOfBookArray; i++){
     if(strcmp(bookArray[i].bookName, "BookToBeRemoved") == 0) //should not compare names, should compare the number of books
     {
-      check = 1;
-      break;
-    }
-    else{
-      check = 0;
+      if(bookArray[i].bookNumber == 0){
+        check = 0;
+        break;
+      }
     }
   }
 
@@ -320,7 +319,8 @@ int main (void){
   RUN_TEST(borrow_correct_book);
   RUN_TEST(borrow_invalid_book);
   RUN_TEST(borrow_2_books);
-  RUN_TEST(unregistered_student);
+  RUN_TEST(unregistered_student_cannot_borrow_book);
+  RUN_TEST(unregistered_student_cannot_return_book);
   RUN_TEST(return_unborrowed_book);
   RUN_TEST(book_doesnt_exist);
 
