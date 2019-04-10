@@ -239,7 +239,7 @@ int returnBook(int studID, char* bookToReturn)
 }
 
 
-void removeBook(char* bookTitle){
+int removeBook(char* bookTitle){
 
   int i;
   int bookInLibrary; //checks whether the book being removed is in library
@@ -257,5 +257,5 @@ void removeBook(char* bookTitle){
       bookInLibrary = 0;
     }
   }
-  return;
+  return bookInLibrary;
 }

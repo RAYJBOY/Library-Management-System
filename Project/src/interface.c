@@ -2,14 +2,17 @@
 
 int userChoice;
 int librarianChoice;
+int studentChoice;
 char tempBookName[20];
 char tempAuthorName[20];
 char bookToRemove[20];
 int numberofBooks;
+char tempStudentName[20];
+int tempID;
 
 void startingPoint(){
 
-  printf("Welcome to my Library Management System!");
+  printf("\nWelcome to my Library Management System!\n");
 
   do{
     printf("\n\nChoose an option below\n1)Librarian\n2)Student\n3)Quit\nAnswer: ");
@@ -33,8 +36,15 @@ void startingPoint(){
             printf("Enter the number of books: ");
             scanf("%d", &numberofBooks);
 
-            addNewBook(tempBookName,tempAuthorName, numberofBooks);
-            printf("Done!");
+            if(addNewBook(tempBookName,tempAuthorName, numberofBooks) == 1)
+            {
+              printf("Done!\n");
+            }
+
+            else{
+              printf("\nSomething went wrong...\n");
+            }
+
             fflush(stdin);
             continue;
           }
@@ -44,7 +54,16 @@ void startingPoint(){
             getchar();
             printf("Enter the book name: ");
             fgets(bookToRemove,20,stdin);
-            removeBook(bookToRemove);
+            //removeBook(bookToRemove);
+
+            if(removeBook(bookToRemove) == 0)
+            {
+              printf("\nBook not in library!\n");
+            }
+
+            else{
+              printf("\nBook removed!\n");
+            }
           }
 
           else if(librarianChoice == 3)
@@ -57,9 +76,87 @@ void startingPoint(){
             listBooks();
           }
 
+          else if(librarianChoice == 5)
+          {
+            int IDOfStudent;
+            printf("Enter the student ID: ");
+            scanf("%d", &IDOfStudent);
+            StudentStructure* studentDetails = searchStudent(IDOfStudent);
+            printf("\nStudent details...\n");
+            printf("Student name: %s", studentDetails->studentName);
+            printf("\nStudent ID: %d", studentDetails->studentID);
+            printf("\nBook borrowed: %s", studentDetails->bookBorrowed);
+            printf("\n");
+          }
+
 
       }while(librarianChoice != 0);
 
+
+    }
+
+    else if(userChoice == 2)
+    {
+      do
+      {
+          printf("\n\nChoose what you want to do\n0)Back to menu\n1)Register to library\n2)List all books in library\n3)Search for book\n4)Borrow a book\n5)Return a book\nAnswer: ");
+          scanf("%d",&studentChoice);
+          if(studentChoice == 1)
+          {
+            getchar();
+            printf("Enter student name: ");
+            fgets(tempStudentName,20,stdin);
+
+            printf("Enter student ID: ");
+            scanf("%d", &tempID);
+
+            registerStudent(tempID,tempStudentName);
+            printf("Done!");
+            fflush(stdin);
+            continue;
+          }
+
+          else if(studentChoice == 2)
+          {
+            listBooks();
+          }
+
+          else if(studentChoice == 3)
+          {
+            getchar();
+            printf("Enter the book name: ");
+            fgets(tempBookName,20,stdin);
+            BookStructure* bookDetails = searchBook(tempBookName);
+            printf("\nBook details...\n");
+            printf("\nName of book: %s",bookDetails->bookName);
+            printf("\nName of author: %s",bookDetails->authorName);
+            printf("\nAmount: %d", bookDetails->bookNumber);
+            printf("\n");
+          }
+
+          else if(studentChoice == 4)
+          {
+            getchar();
+            printf("Enter your name: ");
+            fgets(tempStudentName,20,stdin);
+            printf("Enter book name: ");
+            fgets(tempBookName,20,stdin);
+            borrowBook(tempStudentName,tempBookName);
+          }
+
+          else if(studentChoice == 5)
+          {
+            getchar();
+            printf("Enter your ID: ");
+            scanf("%d", &tempID);
+            getchar();
+            printf("Enter book name: ");
+            fgets(tempBookName,20,stdin);
+            returnBook(tempID,tempBookName);
+          }
+
+
+      }while(studentChoice != 0);
 
     }
 
