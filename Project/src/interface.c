@@ -97,6 +97,7 @@ void startingPoint(){
 
     else if(userChoice == 2)
     {
+      int check;
       do
       {
           printf("\n\nChoose what you want to do\n0)Back to menu\n1)Register to library\n2)List all books in library\n3)Search for book\n4)Borrow a book\n5)Return a book\nAnswer: ");
@@ -110,8 +111,24 @@ void startingPoint(){
             printf("Enter student ID: ");
             scanf("%d", &tempID);
 
-            registerStudent(tempID,tempStudentName);
-            printf("Done!");
+            check = registerStudent(tempID,tempStudentName);
+
+            if(check == 1){
+              printf("\nDone!\n");
+            }
+
+            else if(check == 0){
+              printf("\nStudent is already registered!\n");
+            }
+
+            else if(check == 2){
+              printf("\nStudent ID taken!\n");
+            }
+
+            else if(check == 3){
+              printf("\nInvalid ID!\n");
+            }
+
             fflush(stdin);
             continue;
           }
@@ -136,23 +153,57 @@ void startingPoint(){
 
           else if(studentChoice == 4)
           {
+            int check;
             getchar();
             printf("Enter your name: ");
             fgets(tempStudentName,20,stdin);
             printf("Enter book name: ");
             fgets(tempBookName,20,stdin);
-            borrowBook(tempStudentName,tempBookName);
+            check = borrowBook(tempStudentName,tempBookName);
+
+            if(check == 1){
+              printf("\nDone\n");
+            }
+
+            else if(check == 0){
+              printf("\nStudent cannot borrow 2 books at the same time!\n");
+            }
+
+            else if(check == 2){
+              printf("\nBook is not in library!\n");
+            }
+
+            else if(check == 3){
+              printf("\nStudent is not registered!\n");
+            }
           }
 
           else if(studentChoice == 5)
           {
+            int check;
             getchar();
             printf("Enter your ID: ");
             scanf("%d", &tempID);
             getchar();
             printf("Enter book name: ");
             fgets(tempBookName,20,stdin);
-            returnBook(tempID,tempBookName);
+            check = returnBook(tempID,tempBookName);
+
+            if(check == 1){
+              printf("\nDone!\n");
+            }
+
+            else if(check == 0){
+              printf("\nIncorrect details!\n");
+            }
+
+            else if(check == 2){
+              printf("\nYou cannot return a book that is not in the library!\n");
+            }
+
+            else if(check == 3){
+              printf("\nYou cannot return a book you have not borrowed!\n");
+            }
           }
 
 

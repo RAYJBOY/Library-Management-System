@@ -65,7 +65,7 @@ int addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)//1 for f
 int registerStudent(int student_ID, char* nameOfStudent){ //1 for fine, 0 for student already exists, 2 for ID already exists, 3 for invalid ID
   int i; //used in the for loop below
 
-  for(i = 0; i<=indexOfStudentArray; i++) //checks if the same studeny name is already present in the array
+  for(i = 0; i<=indexOfStudentArray; i++) //checks if the same student name is already present in the array
   {
     if(strcmp(studentArray[i].studentName, nameOfStudent) == 0)
     {
@@ -113,7 +113,7 @@ int registerStudent(int student_ID, char* nameOfStudent){ //1 for fine, 0 for st
 
 //----------------------------------------------------------------------------------------------------------------
 
-int borrowBook(char* nameOfStudent, char* nameOfBook)//1 for fine, 0 for already has book, 2 for book not in library, 3 for student no in library
+int borrowBook(char* nameOfStudent, char* nameOfBook)//1 for fine, 0 for already has book, 2 for book not in library, 3 for student not in library
 {
   int studentIndex;
   int bookIndex;
