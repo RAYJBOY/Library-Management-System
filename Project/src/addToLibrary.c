@@ -211,7 +211,7 @@ int returnBook(int studID, char* bookToReturn)
         if(strcmp(bookArray[j].bookName, bookToReturn) == 0) //sees where the book is in the library
         {
           bookArray[j].bookNumber++;
-          strcpy("", studentArray[i].bookBorrowed); //after returning book, student has nothing left
+          strcpy(studentArray[i].bookBorrowed,""); //after returning book, student has nothing left
           return 1;
         }
         else

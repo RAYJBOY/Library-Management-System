@@ -18,11 +18,11 @@ stdbool.h
 string.h
 -
 
-../include/interface.h
+../include/addToLibrary.h
 Structures.h
 ../include/Structures.h
 
-/home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/interface.c
-interface.h
-/home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/interface.h
+/home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/addToLibrary.c
+addToLibrary.h
+/home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/addToLibrary.h
 
