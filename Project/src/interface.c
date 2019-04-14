@@ -36,12 +36,15 @@ void startingPoint(){
             printf("Enter the number of books: ");
             scanf("%d", &numberofBooks);
 
-            if(addNewBook(tempBookName,tempAuthorName, numberofBooks) == 1)
+            int checkerror = addNewBook(tempBookName,tempAuthorName, numberofBooks);
+
+            if(checkerror == 1)
             {
               printf("Done!\n");
             }
 
-            else{
+            else if(checkerror == 0)
+            {
               printf("\nSomething went wrong...\n");
             }
 

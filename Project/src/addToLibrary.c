@@ -38,6 +38,7 @@ int addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)//1 for f
       strcpy(bookArray[indexOfBookArray].bookName, nameOfBook);
       strcpy(bookArray[indexOfBookArray].authorName, nameOfAuthor);
       bookArray[indexOfBookArray].bookNumber = numberOfBooks;
+      return 1;
     }
 
     else if(indexOfBookArray == maxBookIndex-1) //if array becomes full, reallocated to another bigger array
@@ -48,6 +49,7 @@ int addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)//1 for f
       strcpy(bookArray[indexOfBookArray].bookName, nameOfBook);
       strcpy(bookArray[indexOfBookArray].authorName, nameOfAuthor);
       bookArray[indexOfBookArray].bookNumber = numberOfBooks;
+      return 1;
     }
 
     else{
@@ -55,6 +57,7 @@ int addNewBook(char* nameOfBook, char* nameOfAuthor, int numberOfBooks)//1 for f
       strcpy(bookArray[indexOfBookArray].bookName, nameOfBook);
       strcpy(bookArray[indexOfBookArray].authorName, nameOfAuthor);
       bookArray[indexOfBookArray].bookNumber = numberOfBooks;
+      return 1;
     }
   }
 

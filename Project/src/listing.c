@@ -10,20 +10,6 @@ extern int indexOfStudentArray;
 
 void listBooks()
 {
-  /*int i;
-
-  printf("----------------------------Books so far---------------------------\n");
-  for(i = 0; i<=indexOfBookArray; i++)
-  {
-    if(bookArray[i].bookNumber!=0)
-    {
-      printf("\nBook name: %s", bookArray[i].bookName);
-      printf("Author name: %s", bookArray[i].authorName);
-      printf("Number of books: %d\n", bookArray[i].bookNumber);
-    }
-  }
-
-  printf("-------------------------------------------------------------------\n");*/
   int i;
   FILE *fptr;
   fptr = fopen("bookList.txt","w");
@@ -48,27 +34,15 @@ void listBooks()
       fprintf(fptr, "|\t %-20s|\t\t %-20s|\t\t %-20d|\n", tempBookName, tempAuthorName, bookArray[i].bookNumber);
       fprintf(fptr, "----------------------------------------------------------------------------------------------\n");
     }
-    
-    fclose(fptr);
-  }
 
+  }
+  fclose(fptr);
 
 }
 
 
 void listStudents()
 {
-  /*int i;
-
-  printf("----------------------------Students so far---------------------------\n");
-  for(i = 0; i<=indexOfStudentArray; i++)
-  {
-    printf("\nStudent name: %s", studentArray[i].studentName);
-    printf("Student ID: %d", studentArray[i].studentID);
-    printf("Book borrowed: %s\n", studentArray[i].bookBorrowed);
-  }
-
-  printf("-------------------------------------------------------------------\n");*/
   int i;
   FILE *fptr;
   fptr = fopen("studentList.txt","w");
@@ -82,15 +56,12 @@ void listStudents()
 
   for(i=0;i<=indexOfStudentArray;i++)
   {
-    char tempStudentName[strlen(studentArray[i].studentName)];
-    char tempBookBorrowed[strlen(studentArray[i].bookBorrowed)];
+    char tempStudentName[strlen(studentArray[i].studentName)+1];
+    char tempBookBorrowed[strlen(studentArray[i].bookBorrowed)+1];
     strcpy(tempStudentName, studentArray[i].studentName);
     strcpy(tempBookBorrowed, studentArray[i].bookBorrowed);
     tempStudentName[strlen(tempStudentName)-1] = '\0';
     tempBookBorrowed[strlen(tempBookBorrowed)-1] = '\0';
-
-    studentArray[i].studentName[strlen(studentArray[i].studentName)] = '\0';
-    studentArray[i].bookBorrowed[strlen(studentArray[i].bookBorrowed)] = '\0';
     fprintf(fptr, "|\t %-20s|\t\t %-20d|\t\t %-20s|\n", tempStudentName, studentArray[i].studentID, tempBookBorrowed);
     fprintf(fptr, "----------------------------------------------------------------------------------------------\n");
   }
