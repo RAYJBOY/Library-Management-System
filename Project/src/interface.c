@@ -54,12 +54,15 @@ void startingPoint(){
 
           else if(librarianChoice == 2)
           {
+            int booksToRemove;
             getchar();
             printf("Enter the book name: ");
             fgets(bookToRemove,20,stdin);
             //removeBook(bookToRemove);
+            printf("Number of books to be removed: ");
+            scanf("%d", &booksToRemove);
 
-            if(removeBook(bookToRemove) == 0)
+            if(removeBook(bookToRemove, booksToRemove) == 0)
             {
               printf("\nBook not in library!\n");
             }

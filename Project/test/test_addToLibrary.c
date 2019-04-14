@@ -283,7 +283,7 @@ void return_unborrowed_book() //complete this
 void book_doesnt_exist(){
 
   addNewBook("BookToBeRemoved", "RandomPerson", 4);
-  removeBook("BookToBeRemoved");
+  removeBook("BookToBeRemoved", 4);
 
   int i, check;
 

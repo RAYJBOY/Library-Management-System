@@ -242,7 +242,7 @@ int returnBook(int studID, char* bookToReturn)
 }
 
 
-int removeBook(char* bookTitle){
+int removeBook(char* bookTitle, int amount){
 
   int i;
   int bookInLibrary; //checks whether the book being removed is in library
@@ -252,7 +252,11 @@ int removeBook(char* bookTitle){
     if(strcmp(bookArray[i].bookName, bookTitle) == 0)
     {
       bookInLibrary = 1;
-      bookArray[i].bookNumber = 0;
+      bookArray[i].bookNumber = bookArray[i].bookNumber-amount;
+      if(bookArray[i].bookNumber<0)
+      {
+        bookArray[i].bookNumber = 0;
+      }
       break;
     }
     else
