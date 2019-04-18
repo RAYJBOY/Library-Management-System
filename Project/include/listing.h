@@ -10,6 +10,7 @@ BookStructure* searchBook();
 StudentStructure* searchStudent();
 void printSearchedBook(char* NameOfBook);
 void printSearchedStudent(int stdID);
+void memFree();
 
 
 

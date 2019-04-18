@@ -5,8 +5,13 @@ CMakeFiles/testing.dir/src/addToLibrary.c.o: ../include/Structures.h
 CMakeFiles/testing.dir/src/addToLibrary.c.o: ../include/addToLibrary.h
 CMakeFiles/testing.dir/src/addToLibrary.c.o: ../src/addToLibrary.c
 
+CMakeFiles/testing.dir/src/listing.c.o: ../include/Structures.h
+CMakeFiles/testing.dir/src/listing.c.o: ../include/listing.h
+CMakeFiles/testing.dir/src/listing.c.o: ../src/listing.c
+
 CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../include/Structures.h
 CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../include/addToLibrary.h
+CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../include/listing.h
 CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../unity/unity.h
 CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../unity/unity_internals.h
 CMakeFiles/testing.dir/test/test_addToLibrary.c.o: ../test/test_addToLibrary.c

@@ -201,6 +201,7 @@ src/listing.o: src/listing.c.o
 src/listing.c.o:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.o
 	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.o
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/listing.c.o
 .PHONY : src/listing.c.o
 
 src/listing.i: src/listing.c.i
@@ -210,6 +211,7 @@ src/listing.i: src/listing.c.i
 src/listing.c.i:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.i
 	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.i
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/listing.c.i
 .PHONY : src/listing.c.i
 
 src/listing.s: src/listing.c.s
@@ -219,6 +221,7 @@ src/listing.s: src/listing.c.s
 src/listing.c.s:
 	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/listing.c.s
 	$(MAKE) -f CMakeFiles/list_testing.dir/build.make CMakeFiles/list_testing.dir/src/listing.c.s
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/listing.c.s
 .PHONY : src/listing.c.s
 
 src/main.o: src/main.c.o

@@ -1,5 +1,6 @@
 #include "addToLibrary.h"
 #include "unity/unity.h"
+#include "listing.h"
 
 extern BookStructure* bookArray;
 extern StudentStructure* studentArray;
@@ -298,6 +299,7 @@ void book_doesnt_exist(){
   }
 
   TEST_ASSERT_EQUAL_INT(0, check);
+  memFree();
 }
 
 
@@ -323,6 +325,8 @@ int main (void){
   RUN_TEST(unregistered_student_cannot_return_book);
   RUN_TEST(return_unborrowed_book);
   RUN_TEST(book_doesnt_exist);
+
+
 
 
 

@@ -5,39 +5,11 @@
 #include "interface.h"
 
 
-/*char tempBookName[20] ;
-char tempAuthorName[20] ;
-int numberofBooks;*/
 
-
-int main()
+int main() //program starts here
 {
 
-  startingPoint();
+  startingPoint(); //calls function in interface
 
-  //printf("Press enter to continue");
-
-  /*do
-  {
-    getchar();
-
-    printf("Enter book name: ");
-    fgets(tempBookName,20,stdin);
-
-
-    printf("Enter author name: ");
-    fgets(tempAuthorName,20,stdin);
-
-
-    printf("Enter the number of books: ");
-    scanf("%d", &numberofBooks);
-
-    addNewBook(tempBookName,tempAuthorName, numberofBooks);
-    listBooks();
-
-
-  }while(1);*/
-
-
-return 0;
+  return 0;
 }

@@ -121,11 +121,35 @@ CMakeFiles/testing.dir/unity/unity.c.o.provides: CMakeFiles/testing.dir/unity/un
 
 CMakeFiles/testing.dir/unity/unity.c.o.provides.build: CMakeFiles/testing.dir/unity/unity.c.o
 
+CMakeFiles/testing.dir/src/listing.c.o: CMakeFiles/testing.dir/flags.make
+CMakeFiles/testing.dir/src/listing.c.o: ../src/listing.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/testing.dir/src/listing.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/testing.dir/src/listing.c.o   -c /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c
+
+CMakeFiles/testing.dir/src/listing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testing.dir/src/listing.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c > CMakeFiles/testing.dir/src/listing.c.i
+
+CMakeFiles/testing.dir/src/listing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testing.dir/src/listing.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/src/listing.c -o CMakeFiles/testing.dir/src/listing.c.s
+
+CMakeFiles/testing.dir/src/listing.c.o.requires:
+.PHONY : CMakeFiles/testing.dir/src/listing.c.o.requires
+
+CMakeFiles/testing.dir/src/listing.c.o.provides: CMakeFiles/testing.dir/src/listing.c.o.requires
+	$(MAKE) -f CMakeFiles/testing.dir/build.make CMakeFiles/testing.dir/src/listing.c.o.provides.build
+.PHONY : CMakeFiles/testing.dir/src/listing.c.o.provides
+
+CMakeFiles/testing.dir/src/listing.c.o.provides.build: CMakeFiles/testing.dir/src/listing.c.o
+
 # Object files for target testing
 testing_OBJECTS = \
 "CMakeFiles/testing.dir/src/addToLibrary.c.o" \
 "CMakeFiles/testing.dir/test/test_addToLibrary.c.o" \
-"CMakeFiles/testing.dir/unity/unity.c.o"
+"CMakeFiles/testing.dir/unity/unity.c.o" \
+"CMakeFiles/testing.dir/src/listing.c.o"
 
 # External object files for target testing
 testing_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ testing_EXTERNAL_OBJECTS =
 testing: CMakeFiles/testing.dir/src/addToLibrary.c.o
 testing: CMakeFiles/testing.dir/test/test_addToLibrary.c.o
 testing: CMakeFiles/testing.dir/unity/unity.c.o
+testing: CMakeFiles/testing.dir/src/listing.c.o
 testing: CMakeFiles/testing.dir/build.make
 testing: CMakeFiles/testing.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable testing"
@@ -145,6 +170,7 @@ CMakeFiles/testing.dir/build: testing
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/src/addToLibrary.c.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/test/test_addToLibrary.c.o.requires
 CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/unity/unity.c.o.requires
+CMakeFiles/testing.dir/requires: CMakeFiles/testing.dir/src/listing.c.o.requires
 .PHONY : CMakeFiles/testing.dir/requires
 
 CMakeFiles/testing.dir/clean:

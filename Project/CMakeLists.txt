@@ -11,6 +11,7 @@ add_executable(testing
   src/addToLibrary.c
   test/test_addToLibrary.c
   unity/unity.c
+  src/listing.c
 )
 
 add_executable(list_testing 	

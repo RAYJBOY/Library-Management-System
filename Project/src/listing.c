@@ -8,11 +8,11 @@ extern int indexOfStudentArray;
 
 
 
-void listBooks()
+void listBooks() //lists all books in the library in a separate file called "listBooks.txt"
 {
   int i;
   FILE *fptr;
-  fptr = fopen("bookList.txt","w");
+  fptr = fopen("bookList.txt","w"); //opens in write mode to edit the file
 
   fprintf(fptr, "%s","\t\t\t\t\tList Of All Books\n\n\n");
 
@@ -23,7 +23,7 @@ void listBooks()
 
   for(i=0;i<=indexOfBookArray;i++)
   {
-    if(bookArray[i].bookNumber!=0)
+    if(bookArray[i].bookNumber!=0) //prints details of all books that are available in the library
     {
       char tempBookName[strlen(bookArray[i].bookName)];
       char tempAuthorName[strlen(bookArray[i].authorName)];
@@ -36,12 +36,12 @@ void listBooks()
     }
 
   }
-  fclose(fptr);
+  fclose(fptr); //closes the file after done
 
 }
 
 
-void listStudents()
+void listStudents() //prints student details in a separate file called "studentList.txt"
 {
   int i;
   FILE *fptr;
@@ -54,7 +54,7 @@ void listStudents()
   fprintf(fptr, "----------------------------------------------------------------------------------------------\n");
 
 
-  for(i=0;i<=indexOfStudentArray;i++)
+  for(i=0;i<=indexOfStudentArray;i++) //prints out all details of students in the library
   {
     char tempStudentName[strlen(studentArray[i].studentName)+1];
     char tempBookBorrowed[strlen(studentArray[i].bookBorrowed)+1];
@@ -65,13 +65,13 @@ void listStudents()
     fprintf(fptr, "|\t %-20s|\t\t %-20d|\t\t %-20s|\n", tempStudentName, studentArray[i].studentID, tempBookBorrowed);
     fprintf(fptr, "----------------------------------------------------------------------------------------------\n");
   }
-  fclose(fptr);
+  fclose(fptr); //closes file after done
 
 }
 
 
 
-BookStructure* searchBook(char* BookName)
+BookStructure* searchBook(char* BookName) //returns a pointer to the struct of the searched book
 {
   int i;
 
@@ -85,7 +85,7 @@ BookStructure* searchBook(char* BookName)
 
 
 
-StudentStructure* searchStudent(int StudentID)
+StudentStructure* searchStudent(int StudentID) //returns a pointer to the struct of the searched student
 {
   int i;
 
@@ -98,20 +98,26 @@ StudentStructure* searchStudent(int StudentID)
 }
 
 
-void printSearchedBook(char* NameOfBook)
+void printSearchedBook(char* NameOfBook) //prints the searched book
 {
   BookStructure* bookToPrint = searchBook(NameOfBook);
   printf("\nBook name: %s", bookToPrint->bookName);
-  printf("\nAuthor name: %s", bookToPrint->authorName);
-  printf("\nAmount of books: %d", bookToPrint->bookNumber);
+  printf("Author name: %s", bookToPrint->authorName);
+  printf("Amount of books: %d", bookToPrint->bookNumber);
 
 }
 
-void printSearchedStudent(int stdID)
+void printSearchedStudent(int stdID) //prints the searched student
 {
   StudentStructure* studentToPrint = searchStudent(stdID);
   printf("\nStudent name: %s", studentToPrint->studentName);
-  printf("\nStudent ID: %d", studentToPrint->studentID);
+  printf("Student ID: %d", studentToPrint->studentID);
   printf("\nBook Borrowed: %s", studentToPrint->bookBorrowed);
 
+}
+
+void memFree() //frees all memory before terminating
+{
+  free(studentArray);
+  free(bookArray);
 }
