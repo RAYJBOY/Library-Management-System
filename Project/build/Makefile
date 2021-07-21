@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project
+CMAKE_SOURCE_DIR = /home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build
+CMAKE_BINARY_DIR = /home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles /home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/c_project_2/Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
