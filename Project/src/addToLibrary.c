@@ -95,6 +95,8 @@ int registerStudent(int student_ID, char* nameOfStudent){ //1 for fine, 0 for st
     indexOfStudentArray++; //increment index before updating array
     strcpy(studentArray[indexOfStudentArray].studentName, nameOfStudent); //updates student details
     studentArray[indexOfStudentArray].studentID = student_ID;
+    strcpy(studentArray[indexOfStudentArray].bookBorrowed, ""); //updates student details
+
   }
 
   else if(indexOfStudentArray == maxStudentIndex-1) //if the dynamic array for students is full
@@ -133,6 +135,7 @@ int borrowBook(char* nameOfStudent, char* nameOfBook)//1 for fine, 0 for already
     {
       if(strcmp(studentArray[studentIndex].bookBorrowed, "") != 0) //if student already has a book borrowed, he cannot borrow another one.
       {
+        printf("String is:%s", studentArray[studentIndex].bookBorrowed);
         return 0; //cannot borrow 2 books at the same time
       }
 

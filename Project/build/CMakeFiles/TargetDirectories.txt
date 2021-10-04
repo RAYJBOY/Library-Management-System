@@ -1,3 +1,5 @@
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles/library.dir
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles/list_testing.dir
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/build/CMakeFiles/testing.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/build/CMakeFiles/edit_cache.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/build/CMakeFiles/library.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/build/CMakeFiles/testing.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/build/CMakeFiles/list_testing.dir

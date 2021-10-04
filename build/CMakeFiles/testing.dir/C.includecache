@@ -1,10 +1,14 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
 #IncludeRegexComplain: ^$
 
 #IncludeRegexTransform: 
+
+..//unity/unity.h
+unity_internals.h
+../unity/unity_internals.h
 
 ../include/Structures.h
 stdio.h
@@ -22,7 +26,67 @@ string.h
 Structures.h
 ../include/Structures.h
 
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/src/addToLibrary.c
+../unity/unity_internals.h
+unity_config.h
+../unity/unity_config.h
+setjmp.h
+-
+math.h
+-
+stddef.h
+-
+stdarg.h
+-
+stdint.h
+-
+limits.h
+-
+time.h
+-
+stdio.h
+-
+stdio.h
+-
+
+/mnt/c/Projects/LibraryManagement/c_project_2/src/addToLibrary.c
 addToLibrary.h
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/src/addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/addToLibrary.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/test/test_addToLibrary.c
+addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/test/addToLibrary.h
+unity/unity.h
+/mnt/c/Projects/LibraryManagement/c_project_2/test/unity/unity.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity.c
+unity.h
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity.h
+stddef.h
+-
+
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity.h
+unity_internals.h
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity_internals.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity_internals.h
+unity_config.h
+/mnt/c/Projects/LibraryManagement/c_project_2/unity/unity_config.h
+setjmp.h
+-
+math.h
+-
+stddef.h
+-
+stdarg.h
+-
+stdint.h
+-
+limits.h
+-
+time.h
+-
+stdio.h
+-
+stdio.h
+-
 

@@ -1,10 +1,14 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
 #IncludeRegexComplain: ^$
 
 #IncludeRegexTransform: 
+
+..//unity/unity.h
+unity_internals.h
+../unity/unity_internals.h
 
 ../include/Structures.h
 stdio.h
@@ -25,10 +29,6 @@ Structures.h
 ../include/listing.h
 Structures.h
 ../include/Structures.h
-
-../unity/unity.h
-unity_internals.h
-../unity/unity_internals.h
 
 ../unity/unity_internals.h
 unity_config.h
@@ -52,35 +52,35 @@ stdio.h
 stdio.h
 -
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/src/addToLibrary.c
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/src/addToLibrary.c
 addToLibrary.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/src/addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/src/addToLibrary.h
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/src/listing.c
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/src/listing.c
 listing.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/src/listing.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/src/listing.h
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/test/test_addToLibrary.c
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/test/test_addToLibrary.c
 addToLibrary.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/test/addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/test/addToLibrary.h
 unity/unity.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/test/unity/unity.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/test/unity/unity.h
 listing.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/test/listing.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/test/listing.h
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity.c
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity.c
 unity.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity.h
 stddef.h
 -
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity.h
 unity_internals.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity_internals.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity_internals.h
 
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity_internals.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity_internals.h
 unity_config.h
-/home/cserv1_a/elec_ug/el18mhi/el18mhi/Year1/c_project_2/Project/unity/unity_config.h
+/mnt/c/Projects/LibraryManagement/c_project_2/Project/unity/unity_config.h
 setjmp.h
 -
 math.h

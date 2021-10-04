@@ -1,2 +1,4 @@
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/build/CMakeFiles/library.dir
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/build/CMakeFiles/testing.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/build/CMakeFiles/edit_cache.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/build/CMakeFiles/testing.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Projects/LibraryManagement/c_project_2/build/CMakeFiles/library.dir

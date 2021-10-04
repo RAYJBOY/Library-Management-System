@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -22,7 +22,27 @@ string.h
 Structures.h
 ../include/Structures.h
 
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/src/addToLibrary.c
+../include/listing.h
+Structures.h
+../include/Structures.h
+
+../include/removeFromLibrary.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/src/addToLibrary.c
 addToLibrary.h
-/home/cserv1_a/elec_ug/el18mhi/C_PROJECT_2/src/addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/addToLibrary.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/src/listing.c
+listing.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/listing.h
+
+/mnt/c/Projects/LibraryManagement/c_project_2/src/main.c
+Structures.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/Structures.h
+addToLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/addToLibrary.h
+removeFromLibrary.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/removeFromLibrary.h
+listing.h
+/mnt/c/Projects/LibraryManagement/c_project_2/src/listing.h
 

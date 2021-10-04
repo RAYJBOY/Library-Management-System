@@ -1,4 +1,4 @@
-FILE(REMOVE_RECURSE
+file(REMOVE_RECURSE
   "CMakeFiles/testing.dir/src/addToLibrary.c.o"
   "CMakeFiles/testing.dir/test/test_addToLibrary.c.o"
   "CMakeFiles/testing.dir/unity/unity.c.o"
@@ -7,6 +7,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang C)
-  INCLUDE(CMakeFiles/testing.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang C)
+  include(CMakeFiles/testing.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
